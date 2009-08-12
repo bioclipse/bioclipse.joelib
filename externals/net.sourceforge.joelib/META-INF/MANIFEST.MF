@@ -2,10 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JOELib Library
 Bundle-SymbolicName: net.sourceforge.joelib;singleton:=true
-Bundle-Version: 0.0.0.20040827
+Bundle-Version: 0.0.1.20040827
 Require-Bundle: org.eclipse.core.runtime
-Bundle-ClassPath: .,
- jars/joelib.jar
+Bundle-ClassPath: jars/joelib.jar,
+ .
 Bundle-Activator: net.sourceforge.joelib.Activator
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: The Bioclipse Team
