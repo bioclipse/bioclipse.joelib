@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.bioclipse.joelib_feature"
+      label="JOELib Feature"
+      version="2.1.0.v20090807"
+      provider-name="The Bioclipse Team"
+      plugin="net.bioclipse.joelib">
+
+   <description url="http://joelib.sf.net/">
+      JOELib support for Bioclipse.
+   </description>
+
+   <copyright>
+      The Bioclipse-Pellet is:
+Copyright (c) 2009 The Bioclipse Project Team and others.
+All rights reserved.
+
+The JOELib library itself is copyrighted by others.
+   </copyright>
+
+   <license url="http://www.gnu.org/licenses/gpl-2.0.html">
+      GNU GENERAL PUBLIC LICENSE
+   </license>
+
+   <url>
+      <discovery label="JOELib Homepage" url="http://joelib.sf.net/"/>
+   </url>
+
+   <requires>
+      <import feature="net.bioclipse.qsar_feature" version="2.1.0.v20090807" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="net.sourceforge.joelib"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
