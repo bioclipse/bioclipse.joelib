@@ -37,4 +37,11 @@ The JOELib library itself is copyrighted by others.
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="net.bioclipse.joelib"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
