@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+  <extension point="net.bioclipse.qsar.descriptorProvider">
+    <provider id="net.bioclipse.joelib.descriptorprovider"
+      name="JOELib"
+      vendor="JOELib"
+      namespace="http://joelib.sourceforge.net"
+      version="1.0.0"
+      shortName="JOELib"
+      calculator="net.bioclipse.joelib.qsar.impl.JOELibDescriptorCalculator"
+      acceptsSmiles="true"
+      acceptsCml="true"
+      acceptsMolfile="true">
+
+      <!-- descriptorImpl id="joelib.desc.types.BCUT"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#BCUT"
+        description="Eigenvalue based descriptor noted for its utility in chemical diversity."
+        name="BCUT">
+      </descriptorImpl -->
+      <descriptorImpl id="joelib.desc.types.NumberOfAtoms"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomCount"
+        description="Number of Atoms."
+        name="NumberOfAtoms">
+      </descriptorImpl>
+    </provider>
+  </extension>
+
+</plugin>
