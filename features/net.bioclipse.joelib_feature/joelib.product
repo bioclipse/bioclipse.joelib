@@ -140,8 +140,6 @@
 
    <features>
       <feature id="net.bioclipse.joelib_feature" version="2.1.0.v20090807"/>
-      <feature id="net.bioclipse.platform_feature" version="2.1.0.v20090807"/>
-      <feature id="net.bioclipse.qsar_feature" version="2.1.0.v20090807"/>
    </features>
 
 </product>

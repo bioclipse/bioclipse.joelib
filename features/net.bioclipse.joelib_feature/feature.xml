@@ -4,7 +4,7 @@
       label="JOELib Feature"
       version="2.1.0.v20090807"
       provider-name="The Bioclipse Team"
-      plugin="net.bioclipse.joelib">
+      plugin="net.bioclipse.joelib.qsar">
 
    <description url="http://joelib.sf.net/">
       JOELib support for Bioclipse.
@@ -28,7 +28,16 @@ The JOELib library itself is copyrighted by others.
 
    <requires>
       <import feature="net.bioclipse.qsar_feature" version="2.1.0.v20090807" match="greaterOrEqual"/>
+      <import feature="net.bioclipse.platform_feature" version="2.1.0.v20090807"/>
+      <import feature="net.bioclipse.rdf_feature" version="2.1.0.v20090807"/>
    </requires>
+
+   <plugin
+         id="net.bioclipse.joelib"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="net.sourceforge.joelib"
@@ -38,7 +47,7 @@ The JOELib library itself is copyrighted by others.
          unpack="false"/>
 
    <plugin
-         id="net.bioclipse.joelib"
+         id="net.bioclipse.joelib.qsar"
          download-size="0"
          install-size="0"
          version="0.0.0"
