@@ -20,7 +20,7 @@
         name="BCUT">
       </descriptorImpl -->
       <descriptorImpl id="joelib.desc.types.NumberOfAtoms"
-        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#AtomCount"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#atomCount"
         description="Number of Atoms."
         name="NumberOfAtoms">
       </descriptorImpl>
