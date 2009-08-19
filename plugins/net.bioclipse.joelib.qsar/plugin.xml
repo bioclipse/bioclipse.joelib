@@ -14,11 +14,11 @@
       acceptsCml="true"
       acceptsMolfile="true">
 
-      <!-- descriptorImpl id="joelib.desc.types.BCUT"
+      <descriptorImpl id="joelib.desc.types.BCUT"
         definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#BCUT"
         description="Eigenvalue based descriptor noted for its utility in chemical diversity."
         name="BCUT">
-      </descriptorImpl -->
+      </descriptorImpl>
       <descriptorImpl id="joelib.desc.types.NumberOfAtoms"
         definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#atomCount"
         description="Number of Atoms."
