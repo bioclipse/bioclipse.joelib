@@ -25,7 +25,7 @@ import joelib.desc.result.DoubleResult;
 import joelib.desc.result.IntArrayResult;
 import joelib.desc.result.IntResult;
 import joelib.desc.types.BCUT;
-import joelib.desc.types.BurdenEigenvalues;
+import joelib.desc.types.BasicGroups;
 import joelib.desc.types.NumberOfAtoms;
 import joelib.io.MoleculeIOException;
 import joelib.io.SimpleReader;
@@ -49,10 +49,10 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
     private final static String NS_BOQSAR =
         "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#";
     
-    private final static String DESC_BCUT = 
-        NS_BOQSAR + "BCUT";
-    private final static String DESC_ATOMCOUNT = 
-        NS_BOQSAR + "AtomCount";
+    private final static String 
+        DESC_BCUT        = NS_BOQSAR + "BCUT",
+        DESC_ATOMCOUNT   = NS_BOQSAR + "atomCount",
+        DESC_BASICGROUPS = NS_BOQSAR + "numberOfBasicGroups";
     
     public Map<? extends IMolecule, List<IDescriptorResult>>
         calculateDescriptor(Map<IMolecule, List<DescriptorType>> moldesc,
@@ -115,6 +115,11 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                 IDescriptorResult res = new DescriptorResult();
                 res.setDescriptor( descType );
                 NumberOfAtoms descriptor = new NumberOfAtoms();
+                res = calculateDescriptor(joeMol, descriptor, res);
+            } else if (DESC_BASICGROUPS.equals(descType.getOntologyid())) {
+                IDescriptorResult res = new DescriptorResult();
+                res.setDescriptor( descType );
+                BasicGroups descriptor = new BasicGroups();
                 res = calculateDescriptor(joeMol, descriptor, res);
             }
         }

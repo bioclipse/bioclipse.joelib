@@ -24,6 +24,11 @@
         description="Number of Atoms."
         name="NumberOfAtoms">
       </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.NumberOfBasicGroups"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#numberOfBasicGroups"
+        description="Number of Basic Groups."
+        name="NumberOfBasicGroups">
+      </descriptorImpl>
     </provider>
   </extension>
 
