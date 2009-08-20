@@ -41,6 +41,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
 
+@SuppressWarnings("serial")
 public class JOELibDescriptorCalculator implements IDescriptorCalculator {
 
     private static final Logger logger =
@@ -49,10 +50,12 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
     private final static String NS_BOQSAR =
         "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#";
     
-    private final static String 
-        DESC_BCUT        = NS_BOQSAR + "BCUT",
-        DESC_ATOMCOUNT   = NS_BOQSAR + "atomCount",
-        DESC_BASICGROUPS = NS_BOQSAR + "numberOfBasicGroups";
+    private final static Map<String,joelib.desc.Descriptor> descriptors =
+        new HashMap<String,joelib.desc.Descriptor>() {{
+            this.put(NS_BOQSAR + "BCUT", new BCUT());
+            this.put(NS_BOQSAR + "atomCount", new NumberOfAtoms());
+            this.put(NS_BOQSAR + "numberOfBasicGroups", new BasicGroups());
+    }};
     
     public Map<? extends IMolecule, List<IDescriptorResult>>
         calculateDescriptor(Map<IMolecule, List<DescriptorType>> moldesc,
@@ -106,21 +109,20 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                 res.setErrorMessage("Could not create a JOELib molecule.");
                 res.setValues(new Float[0]);
                 res.setLabels(new String[0]);
-            } else if (DESC_BCUT.equals(descType.getOntologyid())) {
+            }
+
+            joelib.desc.Descriptor descriptor =
+                descriptors.get(descType.getOntologyid());
+            if (descriptor != null) {
                 IDescriptorResult res = new DescriptorResult();
                 res.setDescriptor( descType );
-                BCUT descriptor = new BCUT();
                 res = calculateDescriptor(joeMol, descriptor, res);
-            } else if (DESC_ATOMCOUNT.equals(descType.getOntologyid())) {
+            } else {
                 IDescriptorResult res = new DescriptorResult();
                 res.setDescriptor( descType );
-                NumberOfAtoms descriptor = new NumberOfAtoms();
-                res = calculateDescriptor(joeMol, descriptor, res);
-            } else if (DESC_BASICGROUPS.equals(descType.getOntologyid())) {
-                IDescriptorResult res = new DescriptorResult();
-                res.setDescriptor( descType );
-                BasicGroups descriptor = new BasicGroups();
-                res = calculateDescriptor(joeMol, descriptor, res);
+                res.setErrorMessage("Could not that JOELib descriptor.");
+                res.setValues(new Float[0]);
+                res.setLabels(new String[0]);
             }
         }
         return results;
