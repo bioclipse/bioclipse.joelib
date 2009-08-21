@@ -17,19 +17,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import joelib.desc.DescResult;
-import joelib.desc.DescriptorException;
-import joelib.desc.result.BitResult;
-import joelib.desc.result.DoubleArrayResult;
-import joelib.desc.result.DoubleResult;
-import joelib.desc.result.IntArrayResult;
-import joelib.desc.result.IntResult;
-import joelib.desc.types.BCUT;
-import joelib.desc.types.BasicGroups;
-import joelib.desc.types.NumberOfAtoms;
-import joelib.io.MoleculeIOException;
-import joelib.io.SimpleReader;
-import joelib.molecule.JOEMol;
+import joelib2.feature.Feature;
+import joelib2.feature.FeatureException;
+import joelib2.feature.FeatureResult;
+import joelib2.feature.result.BitResult;
+import joelib2.feature.result.DoubleArrayResult;
+import joelib2.feature.result.DoubleResult;
+import joelib2.feature.result.IntArrayResult;
+import joelib2.feature.result.IntResult;
+import joelib2.feature.types.BCUT;
+import joelib2.feature.types.count.AcidicGroups;
+import joelib2.feature.types.count.BasicGroups;
+import joelib2.feature.types.count.NumberOfAtoms;
+import joelib2.io.types.ChemicalMarkupLanguage;
+import joelib2.molecule.BasicConformerMolecule;
+import joelib2.molecule.Molecule;
 import net.bioclipse.core.business.BioclipseException;
 import net.bioclipse.core.domain.IMolecule;
 import net.bioclipse.qsar.DescriptorType;
@@ -50,11 +52,12 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
     private final static String NS_BOQSAR =
         "http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#";
     
-    private final static Map<String,joelib.desc.Descriptor> descriptors =
-        new HashMap<String,joelib.desc.Descriptor>() {{
+    private final static Map<String,Feature> descriptors =
+        new HashMap<String,Feature>() {{
             this.put(NS_BOQSAR + "BCUT", new BCUT());
             this.put(NS_BOQSAR + "atomCount", new NumberOfAtoms());
             this.put(NS_BOQSAR + "numberOfBasicGroups", new BasicGroups());
+            this.put(NS_BOQSAR + "numberOfAcidicGroups", new AcidicGroups());
     }};
     
     public Map<? extends IMolecule, List<IDescriptorResult>>
@@ -83,18 +86,16 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
             List<DescriptorType> list, IProgressMonitor monitor) {
         List<IDescriptorResult> results = new ArrayList<IDescriptorResult>();
         
-        JOEMol joeMol = null;
+        Molecule joeMol = new BasicConformerMolecule();
         try {
             String cmlSerialization = mol.toCML();
-            SimpleReader reader = new SimpleReader(
-                new ByteArrayInputStream(cmlSerialization.getBytes()),
-                "CML"
+            ChemicalMarkupLanguage reader = new ChemicalMarkupLanguage();
+            reader.initReader(
+                new ByteArrayInputStream(cmlSerialization.getBytes())
             );
-            joeMol = new JOEMol();
-            reader.readNext(joeMol);
+            boolean success = reader.read(joeMol);
+            if (!success) joeMol = null;
         } catch (IOException e) {
-            joeMol = null;
-        } catch (MoleculeIOException e) {
             joeMol = null;
         } catch (BioclipseException e) {
             joeMol = null;
@@ -111,7 +112,7 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                 res.setLabels(new String[0]);
             }
 
-            joelib.desc.Descriptor descriptor =
+            Feature descriptor =
                 descriptors.get(descType.getOntologyid());
             if (descriptor != null) {
                 IDescriptorResult res = new DescriptorResult();
@@ -129,13 +130,13 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
     }
 
     public IDescriptorResult calculateDescriptor(
-        JOEMol mol, joelib.desc.Descriptor descriptor,
+        Molecule mol, Feature descriptor,
         IDescriptorResult result) {
 
         // get the values
         Float[] resultVals = new Float[0];
         try {
-            DescResult joeResults = descriptor.calculate(mol);
+            FeatureResult joeResults = descriptor.calculate(mol);
             System.out.println("Class: " + joeResults.getClass().getName());
             if (joeResults instanceof IntResult) {
                 resultVals = new Float[1];
@@ -167,7 +168,7 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                     joeResults.getClass().getName()
                 );
             }
-        } catch (DescriptorException e) {
+        } catch (FeatureException e) {
             logger.error("Could not calculate JOELib descriptor: " + e.getMessage());
             e.printStackTrace();
             for (int j=0; j<resultVals.length; j++) {
