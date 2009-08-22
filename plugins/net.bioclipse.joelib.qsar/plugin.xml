@@ -24,6 +24,11 @@
         description="Number of Atoms."
         name="NumberOfAtoms">
       </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.NumberOfBonds"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#bondCount"
+        description="Number of Bonds."
+        name="NumberOfBonds">
+      </descriptorImpl>
       <descriptorImpl id="joelib.desc.types.NumberOfBasicGroups"
         definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#numberOfBasicGroups"
         description="Number of Basic Groups."
@@ -43,6 +48,11 @@
         definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#heteroCycles"
         description="Number of Heterocycles."
         name="NumberOfHeterocycles">
+      </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.PolarSurfaceArea"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#tpsa"
+        description="Polar Surface Area."
+        name="PolarSurface Area">
       </descriptorImpl>
     </provider>
   </extension>
