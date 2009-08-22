@@ -34,6 +34,16 @@
         description="Number of Acidic Groups."
         name="NumberOfAcidicGroups">
       </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.BurdenModifiedEigenvalues"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#burdenModifiedEigenvalues"
+        description="Burden Modified Eigenvalues."
+        name="BurdenModifiedEigenvalues">
+      </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.HeteroCycles"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#heteroCycles"
+        description="Number of Heterocycles."
+        name="NumberOfHeterocycles">
+      </descriptorImpl>
     </provider>
   </extension>
 

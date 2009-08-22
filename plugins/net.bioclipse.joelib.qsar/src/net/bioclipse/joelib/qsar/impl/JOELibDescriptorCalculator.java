@@ -29,6 +29,8 @@ import joelib2.feature.types.BCUT;
 import joelib2.feature.types.count.AcidicGroups;
 import joelib2.feature.types.count.BasicGroups;
 import joelib2.feature.types.count.NumberOfAtoms;
+import joelib2.feature.types.BurdenModifiedEigenvalues;
+import joelib2.feature.types.count.HeteroCycles;
 import joelib2.io.types.ChemicalMarkupLanguage;
 import joelib2.molecule.BasicConformerMolecule;
 import joelib2.molecule.Molecule;
@@ -58,6 +60,9 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
             this.put(NS_BOQSAR + "atomCount", new NumberOfAtoms());
             this.put(NS_BOQSAR + "numberOfBasicGroups", new BasicGroups());
             this.put(NS_BOQSAR + "numberOfAcidicGroups", new AcidicGroups());
+            this.put(NS_BOQSAR + "burdenModifiedEigenvalues",
+                     new BurdenModifiedEigenvalues());
+            this.put(NS_BOQSAR + "heteroCycles", new HeteroCycles());
     }};
     
     public Map<? extends IMolecule, List<IDescriptorResult>>
