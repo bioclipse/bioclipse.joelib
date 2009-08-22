@@ -29,6 +29,11 @@
         description="Number of Basic Groups."
         name="NumberOfBasicGroups">
       </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.NumberOfAcidicGroups"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#numberOfAcidicGroups"
+        description="Number of Acidic Groups."
+        name="NumberOfAcidicGroups">
+      </descriptorImpl>
     </provider>
   </extension>
 
