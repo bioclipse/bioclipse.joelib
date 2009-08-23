@@ -4,5 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="lib" path="jars/joelib.jar"/>
+	<classpathentry kind="lib" path="jars/itext-0.94.jar"/>
+	<classpathentry kind="lib" path="jars/xerces.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

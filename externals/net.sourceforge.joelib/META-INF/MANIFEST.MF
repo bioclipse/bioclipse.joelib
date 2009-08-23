@@ -3,9 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: JOELib2 Library
 Bundle-SymbolicName: net.sourceforge.joelib;singleton:=true
 Bundle-Version: 2.0.0.20090613
-Require-Bundle: org.eclipse.core.runtime,
- com.lowagie.itext;bundle-version="1.5.4"
+Require-Bundle: org.eclipse.core.runtime
 Bundle-ClassPath: jars/joelib.jar,
+ jars/itext-0.94.jar,
+ jars/xerces.jar,
  .
 Bundle-Activator: net.sourceforge.joelib.Activator
 Bundle-ActivationPolicy: lazy
