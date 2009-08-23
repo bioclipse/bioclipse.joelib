@@ -109,8 +109,10 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
             boolean success = reader.read(joeMol);
             if (!success) joeMol = null;
         } catch (IOException e) {
+            logger.warn("Error while reading into a JOELib Molecule", e);
             joeMol = null;
         } catch (BioclipseException e) {
+            logger.warn("Error while reading into a JOELib Molecule", e);
             joeMol = null;
         }
 
