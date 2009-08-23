@@ -33,6 +33,8 @@ import joelib2.feature.types.BurdenModifiedEigenvalues;
 import joelib2.feature.types.count.HeteroCycles;
 import joelib2.feature.types.count.NumberOfBonds;
 import joelib2.feature.types.PolarSurfaceArea;
+import joelib2.feature.types.MolecularWeight;
+import joelib2.feature.types.LogP;
 import joelib2.io.types.ChemicalMarkupLanguage;
 import joelib2.molecule.BasicConformerMolecule;
 import joelib2.molecule.Molecule;
@@ -67,6 +69,8 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                      new BurdenModifiedEigenvalues());
             this.put(NS_BOQSAR + "heteroCycles", new HeteroCycles());
             this.put(NS_BOQSAR + "tpsa", new PolarSurfaceArea());
+            this.put(NS_BOQSAR + "weight", new MolecularWeight());
+            this.put(NS_BOQSAR + "logPbyAtomicContributions", new LogP());
     }};
     
     public Map<? extends IMolecule, List<IDescriptorResult>>

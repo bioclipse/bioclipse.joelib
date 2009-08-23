@@ -54,6 +54,16 @@
         description="Polar Surface Area."
         name="PolarSurface Area">
       </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.MolecularWeight"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#weight"
+        description="Molecular Weight."
+        name="Molecular Weight">
+      </descriptorImpl>
+      <descriptorImpl id="joelib.desc.types.LogP"
+        definition="http://www.blueobelisk.org/ontologies/chemoinformatics-algorithms/#logPbyAtomicContributions"
+        description="LogP"
+        name="LogP">
+      </descriptorImpl>
     </provider>
   </extension>
 
