@@ -85,18 +85,44 @@ public class CMLSequentialSAXReader
 
         boolean success = false;
 
-        // If Aelfred is not available try Xerces
-        if (!success)
-        {
-            try
-            {
-                parser = new org.apache.xerces.parsers.SAXParser();
+        // If JAXP is prefered (comes with Sun JVM 1.4.0 and higher)
+        if (!success) {
+            try {
+                javax.xml.parsers.SAXParserFactory spf = javax.xml.parsers.SAXParserFactory.newInstance();
+                spf.setNamespaceAware(true);
+                javax.xml.parsers.SAXParser saxParser = spf.newSAXParser();
+                parser = saxParser.getXMLReader();
+                logger.info("Using JAXP/SAX XML parser.");
+                success = true;
+            } catch (Exception e) {
+                logger.warn("Could not instantiate JAXP/SAX XML reader: " + e.getMessage());
+                logger.debug(e);
+            }
+        }
+        // Aelfred is first alternative.
+        if (!success) {
+            try {
+                parser = (XMLReader)this.getClass().getClassLoader().
+                        loadClass("gnu.xml.aelfred2.XmlReader").
+                        newInstance();
+                logger.info("Using Aelfred2 XML parser.");
+                success = true;
+            } catch (Exception e) {
+                logger.warn("Could not instantiate Aelfred2 XML reader!");
+                logger.debug(e);
+            }
+        }
+        // Xerces is second alternative
+        if (!success) {
+            try {
+                parser = (XMLReader)this.getClass().getClassLoader().
+                        loadClass("org.apache.xerces.parsers.SAXParser").
+                        newInstance();
                 logger.info("Using Xerces XML parser.");
                 success = true;
-            }
-            catch (Exception e)
-            {
-                throw new IOException("Could not instantiate any XML parser!");
+            } catch (Exception e) {
+                logger.warn("Could not instantiate Xerces XML reader!");
+                logger.debug(e);
             }
         }
 
