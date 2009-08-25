@@ -144,7 +144,7 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
         return results;
     }
 
-    public IDescriptorResult calculateDescriptor(
+    private IDescriptorResult calculateDescriptor(
         Molecule mol, Feature descriptor,
         IDescriptorResult result) {
 
