@@ -1,0 +1,28 @@
+VENDOR:          http://joelib.sf.net
+RELEASE_VERSION: $Revision: 1.2 $
+RELEASE_DATE:    $Date: 2005/01/07 07:18:15 $
+
+#########################################################################
+# Copyright OELIB:          OpenEye Scientific Software, Santa Fe,      
+#                           U.S.A., 1999,2000,2001                      
+# Copyright JOELIB/JOELib2: Dept. Computer Architecture, University of  
+#                           Tuebingen, Germany, 2001,2002,2003,2004,2005
+# Copyright JOELIB/JOELib2: ALTANA PHARMA AG, Konstanz, Germany,        
+#                           2003,2004,2005                              
+#                                                                       
+# This program is free software; you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation version 2 of the License.                
+#                                                                       
+# This program is distributed in the hope that it will be useful,       
+# but WITHOUT ANY WARRANTY; without even the implied warranty of        
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
+# GNU General Public License for more details.                          
+########################################################################
+
+SP3-SP3   60.0 -60.0 180.0
+SP2-SP2   0.0 180.0 -30.0 30.0 150.0 -150.0
+SP3-SP2   0.0 30.0 -30.0 60.0 -60.0 120.0 -120.0 -150.0 150.0 180.0 -90.0 90.0
+
+#nitro
+[aD3]cN(~[OD1])~[OD1]        1 2 3 4  0.0 60.0 -60.0

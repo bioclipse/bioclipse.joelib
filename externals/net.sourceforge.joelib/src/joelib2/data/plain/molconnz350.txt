@@ -1,0 +1,67 @@
+#########################################################################
+# Copyright OELIB:          OpenEye Scientific Software, Santa Fe,      
+#                           U.S.A., 1999,2000,2001                      
+# Copyright JOELIB/JOELib2: Dept. Computer Architecture, University of  
+#                           Tuebingen, Germany, 2001,2002,2003,2004,2005
+# Copyright JOELIB/JOELib2: ALTANA PHARMA AG, Konstanz, Germany,        
+#                           2003,2004,2005                              
+#                                                                       
+# This program is free software; you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation version 2 of the License.                
+#                                                                       
+# This program is distributed in the hope that it will be useful,       
+# but WITHOUT ANY WARRANTY; without even the implied warranty of        
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
+# GNU General Public License for more details.                          
+########################################################################
+id nvx nrings ncirc nelem fw aname
+x0  x1  x2  xp3  xp4  xp5  xp6  xp7  xp8  xp9  xp10
+xv0 xv1 xv2 xvp3 xvp4 xvp5 xvp6 xvp7 xvp8 xvp9 xvp10
+xc3  xc4  xpc4  xch3  xch4  xch5  xch6  xch7  xch8  xch9  xch10
+xvc3 xvc4 xvpc4 xvch3 xvch4 xvch5 xvch6 xvch7 xvch8 xvch9 xvch10
+dx0  dx1  dx2  dxp3  dxp4  dxp5  dxp6  dxp7  dxp8  dxp9  dxp10
+dxv0 dxv1 dxv2 dxvp3 dxvp4 dxvp5 dxvp6 dxvp7 dxvp8 dxvp9 dxvp10
+k0 k1 k2 k3 ka1 ka2 ka3 si totop sumI sumDELI tets2 phia
+s1  s2  s3  s4  s5  s6  s7  s8  s9  s10 s11 s12 s13 s14 s15
+s16 s17 s18 s19 s20 s21 s22 s23 s24 s25 s26 s27 s28 s29 s30
+s31 s32 s33 s34 s35 s36 s37 s38 s39 s40 s41 s42 s43 s44 s45
+s46 s47 s48 s49 s50 s51 s52 s53 s54 s55 s56 s57 s58 s59 s60
+s61 s62 s63 s64 s65 s66 s67 s68 s69 s70 s71 s72 s73 s74 s75
+s76 s77 s78 s79 s80 s81 s82 s83 s84 s85 s86 s87 s88 s89 s90
+SHsOH SHdNH SHsSH SHsNH2 SHssNH SHtCH SHother SHCHnX Hmax Gmax Hmin Gmin Hmaxpos Hminneg
+SsLi SssBe SssssBem SssBH SsssB SssssBm SsCH3 SdCH2 SssCH2 StCH SdsCH SaaCH SsssCH SddC
+StsC SdssC SaasC SaaaC SssssC SsNH3p SsNH2 SssNH2p SdNH SssNH SaaNH StN SsssNHp SdsN
+SaaN SsssN SddsN SaasN SssssNp SsOH SdO SssO SaaO SsF SsSiH3 SssSiH2 SsssSiH SssssSi
+SsPH2 SssPH SsssP SdsssP SsssssP SsSH SdS SssS SaaS SdssS SddssS SssssssS SsCl SsGeH3
+SssGeH2 SsssGeH SssssGe SsAsH2 SssAsH SsssAs SdsssAs SsssssAs SsSeH SdSe SssSe SaaSe SdssSe SddssSe
+SsBr SsSnH3 SssSnH2 SsssSnH SssssSn SsI SsPbH3 SssPbH2 SsssPbH SssssPb
+CHsOH CHdNH CHsSH CHsNH2 CHssNH CHtCH CHother CHCHnX CHmax CGmax CHmin CGmin CHmaxpos CHminneg
+CsLi CssBe CssssBe CssBH CsssB CssssB CsCH3 CdCH2 CssCH2 CtCH CdsCH CaaCH CsssCH CddC
+CtsC CdssC CaasC CaaaC CssssC CsNH3 CsNH2 CssNH2 CdNH CssNH CaaNH CtN CsssNH CdsN
+CaaN CsssN CddsN CaasN CssssNp CsOH CdO CssO CaaO CsF CsSiH3 CssSiH2 CsssSiH CssssSi
+CsPH2 CssPH CsssP CdsssP CsssssP CsSH CdS CssS CaaS CdssS CddssS CssssssS CsCl CsGeH3
+CssGeH2 CsssGeH CssssGe CsAsH2 CssAsH CsssAs CdsssAs CsssssAs CsSeH CdSe CssSe CaaSe CdssSe CddssSe
+CsBr CsSnH3 CssSnH2 CsssSnH CssssSn CsI CsPbH3 CssPbH2 CsssPbH CssssPb
+Hs1  Hs2  Hs3  Hs4  Hs5  Hs6  Hs7  Hs8  Hs9  Hs10 Hs11 Hs12 Hs13 Hs14 Hs15
+Hs16 Hs17 Hs18 Hs19 Hs20 Hs21 Hs22 Hs23 Hs24 Hs25 Hs26 Hs27 Hs28 Hs29 Hs30
+Hs31 Hs32 Hs33 Hs34 Hs35 Hs36 Hs37 Hs38 Hs39 Hs40 Hs41 Hs42 Hs43 Hs44 Hs45
+Hs46 Hs47 Hs48 Hs49 Hs50 Hs51 Hs52 Hs53 Hs54 Hs55 Hs56 Hs57 Hs58 Hs59 Hs60
+Hs61 Hs62 Hs63 Hs64 Hs65 Hs66 Hs67 Hs68 Hs69 Hs70 Hs71 Hs72 Hs73 Hs74 Hs75
+Hs76 Hs77 Hs78 Hs79 Hs80 Hs81 Hs82 Hs83 Hs84 Hs85 Hs86 Hs87 Hs88 Hs89 Hs90
+idw idwbar idc idcbar W Wp pf Wt knotp knotpv nclass numHBd numwHBd numHBa
+nxp1 nxp2  nxp3  nxp4  nxp5  nxp6  nxp7  nxp8  nxp9  nxp10 nxc3 nxc4 nxpc4 nxch3 nxch4 nxch5 nxch6 nxch7 nxch8 nxch9 nxch10 ntpath diam muldiam rad mulrad ishape
+nasH nasHe nasLi nasBe  nasB  nasC  nasN  nasO  nasF  nasNe nasNa nasMg  nasAl nasSi nasP  nasS  nasCl nasAr nasK  nasCa  nasSc nasTi nasV  nasCr nasMn nasFe nasCo nasNi nasCu nasZn
+nasGa nasGe nasAs nasSe nasBr nasKr nasRb nasSr nasY  nasZr nasNb nasMo nasTc nasRu nasRh nasPd nasAg nasCd nasIn nasSn nasSb nasTe nasI  nasXe nasCs nasBa nasLa nasHf nasTa nasW
+nasRe nasOs nasIr nasPt nasAu nasHg nasTl nasPb nasBi nasPo nasAt nasRn
+nd1 nd2 nd3 nd4 nd5 nd6  ne11 ne12 ne13 ne14 ne15 ne16 ne22 ne23 ne24 ne25 ne26 ne33 ne34 ne35 ne36 ne44 ne45 ne46 ne55 ne56 ne66 tg tg3 tm tm3
+n2pe11 n2pe12 n2pe13 n2pe14 n2pe15 n2pe16 n2pe22 n2pe23 n2pe24 n2pe25  n2pe26 n2pe33 n2pe34 n2pe35 n2pe36 n2pe44 n2pe45 n2pe46 n2pe55 n2pe56  n2pe66
+n3pe11 n3pe12 n3pe13 n3pe14 n3pe15 n3pe16 n3pe22 n3pe23 n3pe24 n3pe25 n3pe26 n3pe33 n3pe34 n3pe35 n3pe36 n3pe44 n3pe45 n3pe46 n3pe55 n3pe56 n3pe66
+n4pe11 n4pe12 n4pe13 n4pe14 n4pe15 n4pe16 n4pe22 n4pe23 n4pe24 n4pe25 n4pe26 n4pe33 n4pe34 n4pe35 n4pe36 n4pe44 n4pe45 n4pe46 n4pe55 n4pe56 n4pe66
+ec1  ec2  ec3  ec4  ec5  ec6  ec7  ec8  ec9  ec10 ec11 ec12 ec13 ec14 ec15 ec16 ec17 ec18 ec19 ec20 ec21 ec22 ec23 ec24 ec25 ec26 ec27 ec28 ec29 ec30
+ec31 ec32 ec33 ec34 ec35 ec36 ec37 ec38 ec39 ec40 ec41 ec42 ec43 ec44 ec45 ec46 ec47 ec48 ec49 ec50 ec51 ec52 ec53 ec54 ec55 ec56 ec57 ec58 ec59 ec60
+ec61 ec62 ec63 ec64 ec65 ec66 ec67 ec68 ec69 ec70 ec71 ec72 ec73 ec74 ec75 ec76 ec77 ec78 ec79 ec80 ec81 ec82 ec83 ec84 ec85 ec86 ec87 ec88 ec89 ec90
+SHCsats SHCsatu SHvin SHtvin SHavin SHarom SHHBD SHWHBD SHHBA Qv
+NHBint2 NHBint3 NHBint4 NHBint5 NHBint6 NHBint7 NHBint8 NHBint9 NHBint10 SHBint2 SHBint3 SHBint4 SHBint5 SHBint6 SHBint7 SHBint8 SHBint9 SHBint10
+elem1  elem2  elem3  elem4  elem5  elem6  elem7 elem8
+count1 count2 count3 count4 count5 count6 count7 count8

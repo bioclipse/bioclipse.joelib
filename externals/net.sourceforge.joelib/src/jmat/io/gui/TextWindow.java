@@ -1,0 +1,52 @@
+package jmat.io.gui;
+
+import jmat.data.Text;
+
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
+
+/**
+ * DOCUMENT ME!
+ *
+ * @.author $author$
+ * @version $Revision: 1.4 $
+ */
+public class TextWindow extends JPanel
+{
+    //~ Instance fields ////////////////////////////////////////////////////////
+
+    private Text text;
+
+    //~ Constructors ///////////////////////////////////////////////////////////
+
+    public TextWindow(Text t)
+    {
+        text = t;
+        toWindow();
+    }
+
+    public TextWindow(String s)
+    {
+        text = new Text(s);
+        toWindow();
+    }
+
+    //~ Methods ////////////////////////////////////////////////////////////////
+
+    private void toWindow()
+    {
+        JTextArea textArea = new JTextArea(text.getString());
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        add(scrollPane);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  END OF FILE.
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+//  END OF FILE.
+///////////////////////////////////////////////////////////////////////////////

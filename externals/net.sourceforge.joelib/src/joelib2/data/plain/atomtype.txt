@@ -1,0 +1,88 @@
+VENDOR:          http://joelib.sf.net
+RELEASE_VERSION: $Revision: 1.3 $
+RELEASE_DATE:    $Date: 2005/01/07 07:18:15 $
+
+################################################################################
+#                                                                              #
+# Used to assign the internal atom type to an atom.                            #
+# It is allowed to use assigned hybridisation patterns here, e.g. [#6^3]       #
+# The LAST PATTERN MATCHED is used to assign values.  Additions to this file   #
+# should be placed in the EXTRA DEFINITIONS section                            #
+#                                                                              #
+################################################################################
+# Copyright OELIB:          OpenEye Scientific Software, Santa Fe,      
+#                           U.S.A., 1999,2000,2001                      
+# Copyright JOELIB/JOELib2: Dept. Computer Architecture, University of  
+#                           Tuebingen, Germany, 2001,2002,2003,2004,2005
+# Copyright JOELIB/JOELib2: ALTANA PHARMA AG, Konstanz, Germany,        
+#                           2003,2004,2005                              
+#                                                                       
+# This program is free software; you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation version 2 of the License.                
+#                                                                       
+# This program is distributed in the hope that it will be useful,       
+# but WITHOUT ANY WARRANTY; without even the implied warranty of        
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
+# GNU General Public License for more details.                          
+########################################################################
+
+[#7^3]					N3
+[#7X4+]					N3+
+[#7^2]					Npl
+[#7^1]					N1
+[$(N=*)]				N2
+[$([Nr0]C(=[Nr0])[Nr0])]		Ng+
+[$([Nr0]=C([Nr0])[Nr0])]		Ng+
+[$([NQ1]=C[NQ1])]			Ng+
+[$([NQ1]C=[NQ1])]			Ng+
+[$(N(O)*)]				Nox
+[$(NC=[O,S])]				Nam
+[$(N(~[OQ1])~[OQ1])]			Ntr
+[n]					Nar
+
+[#6^3]					C3
+[#6^2]					C2
+[$(C(=O)[OQ1])]				Cac
+[c]					Car
+[#6^1]					C1
+[#6+]					C+
+[#6-]					C-
+
+[#8^3]					O3
+[#8^2]					O2
+[$(Oa)]					O2
+#Uncomment the following 2 lines for correct sybyl atom typing
+[$([OQ2]C=[O,S])]			O3	#ester oxygen
+[$(Oa)]                        		O3      #aromatic ether
+[#8-]					O-
+[$([#8Q1]~[#6]~[#8Q1])]         	Oco2
+
+[#15]					P
+[#15X4+]				P3+
+[#15;$([#15Q4](~[OQ1])(~[OQ1])~[OQ1])]	Pac
+[#15;$([#15Q3](~[OQ1])~[OQ1])]		Pac
+
+[#16]					S3
+[#16Q3+,#16X3+]				S3+
+[#16;s,$([SQ1]=*)]			S2
+[#16Q4;$(S(=O)(=O))]			So2
+[#16Q3;$(S(=O))]			Sox
+[#16;$([#16Q4](~[OQ1])(~[OQ1])~[OQ1])]	Sac
+[#16;$([#16Q3](~[OQ1])~[OQ1])]		Sac
+
+[#5]					B2
+[#5Q4]					B3
+
+######################## Add Extra Definitions Here ##############################
+
+
+############################# End Extra Definitions ##############################
+
+
+
+
+
+
+
+

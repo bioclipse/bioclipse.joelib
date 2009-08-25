@@ -1,0 +1,775 @@
+VENDOR:          http://joelib.sf.net
+RELEASE_VERSION: $Revision: 1.5 $
+RELEASE_DATE:    $Date: 2006/02/22 02:18:22 $
+
+#########################################################################
+# Here are the results stored which are known in JOELib.
+#
+# With the joelib2.feature.ResultFactory you can have a look at known
+# results and the class which can parse this result type.
+#
+#########################################################################
+# Copyright OELIB:          OpenEye Scientific Software, Santa Fe,      
+#                           U.S.A., 1999,2000,2001                      
+# Copyright JOELIB/JOELib2: Dept. Computer Architecture, University of  
+#                           Tuebingen, Germany, 2001,2002,2003,2004,2005
+# Copyright JOELIB/JOELib2: ALTANA PHARMA AG, Konstanz, Germany,        
+#                           2003,2004,2005                              
+#                                                                       
+# This program is free software; you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation version 2 of the License.                
+#                                                                       
+# This program is distributed in the hope that it will be useful,       
+# but WITHOUT ANY WARRANTY; without even the implied warranty of        
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
+# GNU General Public License for more details.                          
+########################################################################
+
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.AtomDynamicResult
+A_AROMATIC
+A_CHARGECENTER
+A_ENLP
+A_ENPI
+A_ENSIG
+A_FORMCHARGE
+A_FREEEL
+A_HASH
+A_HGROUP
+A_ISMETAL
+A_IUPAC_GROUP
+A_LPSTAB
+A_NEIGHBOR
+A_NEL
+A_NONHNEIGHBOR
+A_PERIPH
+A_PICENTER
+A_PISYS
+A_POLARIZABILITY
+A_QPI
+A_QSIG
+A_QTOT
+A_RADICCENTER
+A_RINGSIZE
+#################################################################################
+#$JOELIB_RESULT$ joelib2.feature.result.BondDynamicResult
+#
+# now me must use the ASYM_BOND_PROPERTY_INDEX property
+# to access this descriptor data correctly
+# It's necessary to define a
+# joelib2.feature.result.AsymBondDynamicResult class !!!
+# the BondDynamicResult is DEPRECATED !!!
+#
+#B_BDE
+#B_BOORD
+#B_DENPI
+#B_DENSIG
+#B_DQPI
+#B_DQSIG
+#B_DQTOT
+#B_NDELOC
+#B_NSTAB
+#B_PDELOC
+#B_POLARIZABILITY
+#B_PSTAB
+#B_RINGSIZE
+#B_SDELOC
+#B_SQIT
+#B_STABRS
+#B_TBDE
+#################################################################################
+## When normalizing the data, the integers will be stored as double values AND
+## can be also loaded as double values !!!
+##
+$JOELIB_RESULT$ joelib2.feature.result.IntResult
+##
+$REGEXP$ SMARTS_c_.*
+Entry_Number
+TRUE_CLASS
+#activity_class
+#
+# PETRA descriptors
+#
+E_CHARGE
+E_DELTAHF
+E_HASH
+E_POLARIZABILITY
+E_RADICAL
+E_STABIL
+E_STRAIN
+M_CHARGE
+M_DELTAHF
+M_HASH
+M_HGROUP
+M_NAME
+M_POLARIZABILITY
+M_RADICAL
+M_STABIL
+M_STRAIN
+#
+# Molconn Z 350
+#
+id
+nvx
+nrings
+ncirc
+nelem
+#aname
+$REGEXP$ nas\p{Upper}\p{Lower}*
+$REGEXP$ nd\d
+$REGEXP$ ne\d+
+tg
+tg3
+tm
+tm3
+$REGEXP$ n\dpe\d+
+$REGEXP$ ec\d+
+$REGEXP$ NHBint\d+
+$REGEXP$ count\d
+#
+# MOE descriptors
+#
+a_acc
+a_acid
+a_base
+a_don
+a_hyd
+a_aro
+a_count
+a_nH
+a_heavy
+a_nB
+a_nBr
+a_nC
+a_nCl
+a_nF
+a_nI
+a_nN
+a_nO
+a_nP
+a_nS
+b_heavy
+b_1rotN
+b_ar
+b_count
+b_double
+b_rotN
+b_single
+b_triple
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.APropDoubleArrResult
+Auto_correlation
+$REGEXP$ .*Burden_modified_eigenvalues:[^:]+
+$REGEXP$ .*Auto_correlation:[^:]+
+$REGEXP$ .*RDF:[^:]+
+$REGEXP$ .*BurdenModifiedEigenvalues:[^:]+
+$REGEXP$ .*Autocorrelation:[^:]+
+$REGEXP$ .*RadialDistributionFunction:[^:]+
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.APropDoubleResult
+$REGEXP$ NONE:s\d+:.*:F\d+:\d+
+$REGEXP$ APkPCA:s\d+:.*:F\d+:\d+
+$REGEXP$ APskPCA:s\d+:.*:F\d+:\d+
+$REGEXP$ APPCA:s\d+:.*:F\d+:\d+
+$REGEXP$ :*Global_topological_charge_index:.+
+#$REGEXP$ .*Burden_modified_eigenvalues:.+:\d+
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.DoubleResult
+##
+TRUE
+###
+LOGBB
+IC50
+activity_class
+hia_measured
+logS_expected
+residue_huuskonen
+XlogP
+Number_of_HBA_2
+predicted_logP
+pIC50
+Moriguchi_logP
+Rekker_logP
+Hansch_Leo_logP
+Suzuki_Kudo_logP
+####Achim's sensors
+$REGEXP$ S1_W\d+.*
+$REGEXP$ S2_W\d+.*
+$REGEXP$ S3_W\d+.*
+$REGEXP$ S1_STD\d+.*
+$REGEXP$ S2_STD\d+.*
+$REGEXP$ S3_STD\d+.*
+#melting_point:::contains also 'liq' entries !
+#melting_point
+# pca, kpca extracted eigenvalue projection and inner product features
+$REGEXP$ feature\d+
+#
+# Molconn Z 350
+#
+$REGEXP$ SHBint\d+
+Qv
+SHCsats
+SHCsatu
+SHvin
+SHtvin
+SHavin
+SHarom
+SHHBD
+SHWHBD
+SHHBA
+petitjeanSC
+fw
+x0
+x1
+x2
+xp3
+xp4
+xp5
+xp6
+xp7
+xp8
+xp9
+xp10
+xv0
+xv1
+xv2
+xvp3
+xvp4
+xvp5
+xvp6
+xvp7
+xvp8
+xvp9
+xvp10
+xc3
+xc4
+xpc4
+xch3
+xch4
+xch5
+xch6
+xch7
+xch8
+xch9
+xch10
+xvc3
+xvc4
+xvpc4
+xvch3
+xvch4
+xvch5
+xvch6
+xvch7
+xvch8
+xvch9
+xvch10
+dx0
+dx1
+dx2
+dxp3
+dxp4
+dxp5
+dxp6
+dxp7
+dxp8
+dxp9
+dxp10
+dxv0
+dxv1
+dxv2
+dxvp3
+dxvp4
+dxvp5
+dxvp6
+dxvp7
+dxvp8
+dxvp9
+dxvp10
+k0
+k1
+k2
+k3
+ka1
+ka2
+ka3
+si
+totop
+sumI
+sumDELI
+tets2
+phia
+$REGEXP$ s\d+
+SHsOH
+SHdNH
+SHsSH
+SHsNH2
+SHssNH
+SHtCH
+SHother
+SHCHnX
+Hmax
+Gmax
+Hmin
+Gmin
+Hmaxpos
+Hminneg
+SsLi
+SssBe
+SssssBem
+SssBH
+SsssB
+SssssBm
+SsCH3
+SdCH2
+SssCH2
+StCH
+SdsCH
+SaaCH
+SsssCH
+SddC
+StsC
+SdssC
+SaasC
+SaaaC
+SssssC
+SsNH3p
+SsNH2
+SssNH2p
+SdNH
+SssNH
+SaaNH
+StN
+SsssNHp
+SdsN
+SaaN
+SsssN
+SddsN
+SaasN
+SssssNp
+SsOH
+SdO
+SssO
+SaaO
+SsF
+SsSiH3
+SssSiH2
+SsssSiH
+SssssSi
+SsPH2
+SssPH
+SsssP
+SdsssP
+SsssssP
+SsSH
+SdS
+SssS
+SaaS
+SdssS
+SddssS
+SssssssS
+SsCl
+SsGeH3
+SssGeH2
+SsssGeH
+SssssGe
+SsAsH2
+SssAsH
+SsssAs
+SdsssAs
+SsssssAs
+SsSeH
+SdSe
+SssSe
+SaaSe
+SdssSe
+SddssSe
+SsBr
+SsSnH3
+SssSnH2
+SsssSnH
+SssssSn
+SsI
+SsPbH3
+SssPbH2
+SsssPbH
+SssssPb
+CHsOH
+CHdNH
+CHsSH
+CHsNH2
+CHssNH
+CHtCH
+CHother
+CHCHnX
+CHmax
+CGmax
+CHmin
+CGmin
+CHmaxpos
+CHminneg
+CsLi
+CssBe
+CssssBe
+CssBH
+CsssB
+CssssB
+CsCH3
+CdCH2
+CssCH2
+CtCH
+CdsCH
+CaaCH
+CsssCH
+CddC
+CtsC
+CdssC
+CaasC
+CaaaC
+CssssC
+CsNH3
+CsNH2
+CssNH2
+CdNH
+CssNH
+CaaNH
+CtN
+CsssNH
+CdsN
+CaaN
+CsssN
+CddsN
+CaasN
+CssssNp
+CsOH
+CdO
+CssO
+CaaO
+CsF
+CsSiH3
+CssSiH2
+CsssSiH
+CssssSi
+CsPH2
+CssPH
+CsssP
+CdsssP
+CsssssP
+CsSH
+CdS
+CssS
+CaaS
+CdssS
+CddssS
+CssssssS
+CsCl
+CsGeH3
+CssGeH2
+CsssGeH
+CssssGe
+CsAsH2
+CssAsH
+CsssAs
+CdsssAs
+CsssssAs
+CsSeH
+CdSe
+CssSe
+CaaSe
+CdssSe
+CddssSe
+CsBr
+CsSnH3
+CssSnH2
+CsssSnH
+CssssSn
+CsI
+CsPbH3
+CssPbH2
+CsssPbH
+CssssPb
+$REGEXP$ Hs\d+
+idw
+idwbar
+idc
+idcbar
+W
+Wp
+pf
+Wt
+knotp
+knotpv
+nclass
+numHBd
+numwHBd
+numHBa
+$REGEXP$ nxp\d+
+nxc3
+nxc4
+nxpc4
+$REGEXP$ nxch\d+
+ntpath
+diam
+muldiam
+rad
+mulrad
+ishape
+#
+# MOE descriptors
+#
+a_IC
+a_ICM
+b_rotR
+b_1rotR
+diameter
+petitjean
+radius
+VDistEq
+VDistMa
+weinerPath
+weinerPol
+chi0v
+chi0v_C
+chi1v
+chi1v_C
+reactive
+Weight
+chi0
+chi0_C
+chi1
+chi1_C
+FCharge
+VAdjEq
+VAdjMa
+zagreb
+balabanJ
+PEOE_PC+
+PEOE_PC-
+PEOE_RPC+
+PEOE_RPC-
+$REGEXP$ PEOE_VSA[-+]\d
+PEOE_VSA_FHYD
+PEOE_VSA_FNEG
+PEOE_VSA_FPNEG
+PEOE_VSA_FPOL
+PEOE_VSA_FPOS
+PEOE_VSA_FPPOS
+PEOE_VSA_HYD
+PEOE_VSA_NEG
+PEOE_VSA_PNEG
+PEOE_VSA_POL
+PEOE_VSA_POS
+PEOE_VSA_PPOS
+PC+
+PC-
+Q_PC+
+Q_PC-
+Q_RPC+
+Q_RPC-
+Q_VSA_FHYD
+Q_VSA_FNEG
+Q_VSA_FPNEG
+Q_VSA_FPOL
+Q_VSA_FPOS
+Q_VSA_FPPOS
+Q_VSA_HYD
+Q_VSA_NEG
+Q_VSA_PNEG
+Q_VSA_POL
+Q_VSA_POS
+Q_VSA_PPOS
+RPC+
+RPC-
+E
+E_ang
+E_ele
+E_nb
+E_oop
+E_sol
+E_stb
+E_str
+E_strain
+E_tor
+E_vdw
+E_rele
+E_rnb
+E_rsol
+E_rvdw
+Kier1
+Kier2
+Kier3
+KierA1
+KierA2
+KierA3
+KierFlex
+apol
+bpol
+mr
+dipole
+dipoleX
+dipoleY
+dipoleZ
+pmi
+pmiX
+pmiY
+pmiZ
+rgyr
+vsa_acc
+vsa_acid
+vsa_base
+vsa_don
+vsa_hyd
+vsa_other
+vsa_pol
+SlogP
+$REGEXP$ SlogP_VSA\d+
+SMR
+$REGEXP$ SMR_VSA\d+
+ASA
+ASA+
+ASA-
+ASA_H
+ASA_P
+CASA+
+CASA-
+DASA
+DCASA
+FASA+
+FASA-
+FASA_H
+FASA_P
+FCASA+
+FCASA-
+VSA
+TPSA
+density
+vdw_area
+vdw_vol
+dens
+glob
+std_dim1
+std_dim2
+std_dim3
+vol
+logP(o/w)
+#
+# Human Intestinal Absorption (HIA)
+#
+connolly_surface_polar
+connolly_surf_hydrophob
+rotatable_bonds
+hydrogen_donors
+eccentricity
+std_dim1
+hia_measured
+molecular_weight
+connolly_surf_pol_percent
+logP
+hydrogen_acceptors
+dipol
+#
+# JOELib resolved atom property transformation descriptors
+#
+$REGEXP$ Global_topological_charge_index_\d+
+$REGEXP$ .*Auto_correlation:.+:\d+
+$REGEXP$ .*Atom_mass:\d+
+$REGEXP$ [^:]+Atom_valence:\d+
+$REGEXP$ .*Atom_valence:\d+
+$REGEXP$ .*Atom_van_der_waals_volume:\d+
+$REGEXP$ .*Atom_in_conjugated_environment:\d+
+$REGEXP$ .*Burden_modified_eigenvalues:.+:\d+
+$REGEXP$ .*Conjugated_electrotopological_state_index:\d+
+$REGEXP$ .*Conjugated_topological_distance:\d+
+$REGEXP$ .*Electronegativity_pauling:\d+
+$REGEXP$ .*Electrotopological_state_index:\d+
+$REGEXP$ .*Electrogeometrical_state_index:\d+
+$REGEXP$ .*Electron_affinity:\d+
+$REGEXP$ .*Gasteiger_Marsili:\d+
+$REGEXP$ .*Graph_potentials:\d+
+$REGEXP$ .*Intrinsic_state:\d+
+$REGEXP$ .*Atom_is_negative:\d+
+$REGEXP$ .*Atom_in_acceptor:\d+
+$REGEXP$ .*Atom_in_donor_or_acceptor:\d+
+$REGEXP$ .*Atom_in_donor:\d+
+$REGEXP$ .*Atom_in_ring:\d+
+$REGEXP$ .*Atom_is_positive:\d+
+$REGEXP$ .*Atom_in_terminal_carbon:\d+
+$REGEXP$ .*AtomENAllredRochow:\d+
+$REGEXP$ .*AtomENPauling:\d+
+$REGEXP$ .*AtomElectronAffinity:\d+
+$REGEXP$ .*AtomExplicitHydrogenCount:\d+
+$REGEXP$ .*AtomFreeElectronsCount:\d+
+$REGEXP$ .*AtomFreeOxygenCount:\d+
+$REGEXP$ .*AtomHeavyValence:\d+
+$REGEXP$ .*AtomHeteroValence:\d+
+$REGEXP$ .*AtomImplicitHydrogenCount:\d+
+$REGEXP$ .*AtomImplicitValence:\d+
+$REGEXP$ .*AtomInAcceptor:\d+
+$REGEXP$ .*AtomInAromaticSystem:\d+
+$REGEXP$ .*AtomInConjEnvironment:\d+
+$REGEXP$ .*AtomInDonor:\d+
+$REGEXP$ .*AtomInTerminalCarbon:\d+
+$REGEXP$ .*AtomIsAmideNitrogen:\d+
+$REGEXP$ .*AtomIsAmideNitrogen:\d+
+$REGEXP$ .*AtomIsAromaticNOxide:\d+
+$REGEXP$ .*AtomIsAxial:\d+
+$REGEXP$ .*AtomIsCarbon:\d+
+$REGEXP$ .*AtomIsCarboxylOxygen:\d+
+$REGEXP$ .*AtomIsChiral:\d+
+$REGEXP$ .*AtomIsClockwise:\d+
+$REGEXP$ .*AtomIsClockwise:\d+
+$REGEXP$ .*AtomIsElectronegative:\d+
+$REGEXP$ .*AtomIsHalogen:\d+
+$REGEXP$ .*AtomIsHeteroatom:\d+
+$REGEXP$ .*AtomIsNegative:\d+
+$REGEXP$ .*AtomIsNitrogen:\d+
+$REGEXP$ .*AtomIsNonPolarHydrogen:\d+
+$REGEXP$ .*AtomIsOxygen:\d+
+$REGEXP$ .*AtomIsPhosphateOxygen:\d+
+$REGEXP$ .*AtomIsPhosphorus:\d+
+$REGEXP$ .*AtomIsPolarHydrogen:\d+
+$REGEXP$ .*AtomIsPositive:\d+
+$REGEXP$ .*AtomIsUnsaturated:\d+
+$REGEXP$ .*AtomIsUnsaturated:\d+
+$REGEXP$ .*AtomKekuleBondOrderSum:\d+
+$REGEXP$ .*AtomMass:\d+
+$REGEXP$ .*AtomVanDerWaalsVolume:\d+
+$REGEXP$ .*CharacteristicPolynomialCoefficients:\d+
+$REGEXP$ .*ConjElectroTopolState:\d+
+$REGEXP$ .*ElectrotopologicalState:\d+
+$REGEXP$ .*GraphPotentials:\d+
+$REGEXP$ .*IntrinsicState:\d+
+$REGEXP$ .*AtomIsAlphaBetaUnsaturated:\d+
+$REGEXP$ .*AtomIsSulfateOxygen:\d+
+$REGEXP$ .*AtomInDonAcc:\d+
+$REGEXP$ .*ConjugatedTopologicalDistance:\d+
+$REGEXP$ .*AtomBondOrderSum:\d+
+$REGEXP$ .*ElectrogeometricalState:\d+
+$REGEXP$ .*AtomIsSulfur:\d+
+$REGEXP$ .*AtomPartialCharge:\d+
+$REGEXP$ .*AtomIsHydrogen:\d+
+$REGEXP$ .*AtomValence:\d+
+$REGEXP$ .*AtomHybridisation:\d+
+$REGEXP$ .*AtomIsNitroOxygen:\d+
+$REGEXP$ .*AtomIsAntiClockwise:\d+
+$REGEXP$ .*AtomInRingsCount:\d+
+$REGEXP$ .*AtomENSanderson:\d+
+$REGEXP$ .*AtomInRing:\d+
+$REGEXP$ .*CharacteristicPolynomial:\d+
+$REGEXP$ .*AtomValenceSum:\d+
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.BooleanResult
+$REGEXP$ SMARTS_b_.*
+$REGEXP$ SMARTS_MACCS_.*
+$REGEXP$ SMARTS_SSKey_.*
+#################################################################################
+#
+# MOE special descriptors
+#
+$JOELIB_RESULT$ joelib2.feature.result.IntBitArrayResult
+FP:MACCS
+#################################################################################
+$JOELIB_RESULT$ joelib2.feature.result.BitArrayResult
+dy_fp
+#################################################################################
+#################################################################################

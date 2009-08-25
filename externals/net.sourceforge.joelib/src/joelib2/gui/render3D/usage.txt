@@ -1,0 +1,11 @@
+Rotate molecule:
+Drag with left mouse button pressed
+
+Move molecule:
+Drag with right mouse button pressed
+
+Zoom molecule:
+Drag with middle button
+
+Change the rendering style using the
+"View" menu.

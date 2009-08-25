@@ -1,0 +1,54 @@
+VENDOR:          http://joelib.sf.net
+RELEASE_VERSION: $Revision: 1.4 $
+RELEASE_DATE:    $Date: 2005/02/08 20:25:34 $
+
+########################################################################
+# Copyright OELIB:          OpenEye Scientific Software, Santa Fe,      
+#                           U.S.A., 1999,2000,2001                      
+# Copyright JOELIB/JOELib2: Dept. Computer Architecture, University of  
+#                           Tuebingen, Germany, 2001,2002,2003,2004,2005
+# Copyright JOELIB/JOELib2: ALTANA PHARMA AG, Konstanz, Germany,        
+#                           2003,2004,2005                              
+#                                                                       
+# This program is free software; you can redistribute it and/or modify  
+# it under the terms of the GNU General Public License as published by  
+# the Free Software Foundation version 2 of the License.                
+#                                                                       
+# This program is distributed in the hope that it will be useful,       
+# but WITHOUT ANY WARRANTY; without even the implied warranty of        
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         
+# GNU General Public License for more details.                          
+########################################################################
+
+#PATTERN           MIN  MAX
+#carbon patterns
+[#6Q2r+,#6Q3r+]    1	1
+[#6r]=@*           1    1
+[#6rQ3]=!@*        1    1
+# external double bonds to hetero atoms contribute no electrons to the 
+# aromatic system. This makes sense, because chinoid systems are non-
+# aromatic, e.g. 1,4-Benzochinon
+[#6rQ3]=!@[!#6]    0    0
+[#6rQ3-]           2    2
+
+#nitrogen patterns
+[#7r](-@*)-@*  		2	2
+[#7rQ2]=@*		1	1
+[#7Q3+]			1	1
+[#7rQ3]=O		1	1
+[#7Q2-]			2	2
+
+#oxygen patterns
+[#8r]			2	2
+[#8r+]			1	1
+
+#sulfur patterns
+[#16rQ2]		2	2
+[#16rQ2+]		1	1
+[#16rQ3]=!@O		2	2
+
+#other misc patterns
+[#15rQ3]		2	2
+#[#34rQ2]		2	2
+#[#52rQ2]		2	2
+
