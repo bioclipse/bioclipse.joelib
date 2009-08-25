@@ -4,7 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry excluding="joelib2/gui/example/|joelib2/gui/jmol/|joelib2/gui/render2D/|joelib2/gui/render3D/|joelib2/gui/render3D/graphics3D/|joelib2/gui/render3D/math/geometry/|joelib2/gui/render3D/math/util/|joelib2/gui/render3D/molecule/|joelib2/gui/render3D/util/|joelib2/gui/util/|joelib2/algo/datamining/|joelib2/feature/fields/|wsi/ra/image/|wsi/ra/taglets/|joelib2/io/types/BMP.java|joelib2/io/types/JPEG.java|joelib2/io/types/PDF.java|joelib2/io/BasicImageWriter.java|joelib2/io/types/GIF.java|joelib2/io/types/PNG.java|joelib2/io/types/PPM.java|jtt/docbook/DocBookMolecules.java" kind="src" path="src"/>
 	<classpathentry kind="lib" path="jars/itext-0.94.jar"/>
-	<classpathentry kind="lib" path="jars/xerces.jar"/>
 	<classpathentry kind="lib" path="jars/jdom.jar"/>
 	<classpathentry kind="lib" path="jars/ant.jar"/>
 	<classpathentry kind="output" path="bin"/>
