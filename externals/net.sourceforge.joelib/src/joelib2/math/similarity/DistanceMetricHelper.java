@@ -51,8 +51,9 @@ public class DistanceMetricHelper
         try
         {
             // works only for construtor without arguments
-            dMetric = (DistanceMetric) Class.forName(represention)
-                                            .newInstance();
+            dMetric = (DistanceMetric)DistanceMetricHelper.class
+                .getClassLoader().loadClass(represention)
+                .newInstance();
 
             // for metrics with arguments
             //      Class        cls          = Class.forName(resultRepr);

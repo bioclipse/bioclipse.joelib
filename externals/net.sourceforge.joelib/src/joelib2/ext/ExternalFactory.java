@@ -128,8 +128,9 @@ public class ExternalFactory
 
         try
         {
-            external = (External) Class.forName(extInfo.getRepresentation())
-                                       .newInstance();
+            external = (External)this.getClass().getClassLoader()
+                .loadClass(extInfo.getRepresentation())
+                .newInstance();
         }
         catch (ClassNotFoundException ex)
         {

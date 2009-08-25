@@ -218,8 +218,8 @@ public class ResultFactory extends AbstractDataHolder
             try
             {
                 // works only for construtor without arguments
-                featureResult = (FeatureResult) Class.forName(resultRepr)
-                                                     .newInstance();
+                featureResult = (FeatureResult)this.getClass().getClassLoader()
+                    .loadClass(resultRepr).newInstance();
 
                 // for descriptor with arguments
                 //      Class        cls          = Class.forName(resultRepr);

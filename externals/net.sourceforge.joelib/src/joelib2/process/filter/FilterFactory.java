@@ -126,8 +126,9 @@ public class FilterFactory
 
         try
         {
-            filter = (Filter) Class.forName(filterInfo.getRepresentation())
-                                   .newInstance();
+            filter = (Filter)this.getClass().getClassLoader()
+                .loadClass(filterInfo.getRepresentation())
+                .newInstance();
         }
         catch (ClassNotFoundException ex)
         {

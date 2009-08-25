@@ -91,8 +91,10 @@ public class FeatureFactory
         {
             try
             {
-                descBase = (Feature) Class.forName(descInfo.getRepresentation())
-                                          .newInstance();
+                System.out.println("Attempting to instantiate: " + descInfo.getRepresentation());
+                descBase = (Feature)FeatureFactory.class.getClassLoader()
+                    .loadClass(descInfo.getRepresentation())
+                    .newInstance();
             }
             catch (ClassNotFoundException ex)
             {

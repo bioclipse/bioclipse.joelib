@@ -26,23 +26,20 @@
 ///////////////////////////////////////////////////////////////////////////////
 package joelib2.feature;
 
-import joelib2.feature.types.atomlabel.AtomType;
-
-import joelib2.molecule.Molecule;
-
-import joelib2.molecule.types.BasicPairData;
-
-import joelib2.util.iterator.PairDataIterator;
-
-import wsi.ra.tool.BasicPropertyHolder;
-
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Properties;
 import java.util.Vector;
 
+import joelib2.feature.types.atomlabel.AtomType;
+import joelib2.molecule.Molecule;
+import joelib2.molecule.types.BasicPairData;
+import joelib2.util.iterator.PairDataIterator;
+
 import org.apache.log4j.Category;
+
+import wsi.ra.tool.BasicPropertyHolder;
 
 
 /**
@@ -726,7 +723,8 @@ public final class FeatureHelper
         // try to load Feature representation class
         try
         {
-            descBase = (Feature) Class.forName(repr).newInstance();
+            descBase = (Feature)this.getClass().getClassLoader()
+                .loadClass(repr).newInstance();
         }
         catch (ClassNotFoundException ex)
         {

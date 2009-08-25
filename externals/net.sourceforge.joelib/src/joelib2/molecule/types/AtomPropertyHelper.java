@@ -184,7 +184,7 @@ public class AtomPropertyHelper
             }
             catch (FeatureException e1)
             {
-                throw new RuntimeException(e1.getMessage());
+                throw new RuntimeException(e1.getMessage(), e1);
             }
         }
         else

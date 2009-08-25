@@ -90,8 +90,9 @@ public class MoleculeFileHelper
         //System.out.println("Load MoleculeFileType: "+type.getRepresentation());
         try
         {
-            mfType = (MoleculeFileIO) Class.forName(type.getRepresentation())
-                                           .newInstance();
+            mfType = (MoleculeFileIO)MoleculeFileHelper.class.getClassLoader()
+                .loadClass(type.getRepresentation())
+                .newInstance();
         }
         catch (ClassNotFoundException ex)
         {

@@ -132,7 +132,7 @@ public class DatabaseConnection
         // try to load given database driver
         try
         {
-            Class.forName(driver).newInstance();
+            this.getClass().getClassLoader().loadClass(driver).newInstance();
         }
         catch (Exception e)
         {

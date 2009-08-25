@@ -117,8 +117,9 @@ public class ProcessFactory
 
         try
         {
-            process = (MoleculeProcess) Class.forName(processInfo
-                    .getRepresentation()).newInstance();
+            process = (MoleculeProcess)this.getClass().getClassLoader()
+                .loadClass(processInfo.getRepresentation())
+                .newInstance();
         }
         catch (ClassNotFoundException ex)
         {
