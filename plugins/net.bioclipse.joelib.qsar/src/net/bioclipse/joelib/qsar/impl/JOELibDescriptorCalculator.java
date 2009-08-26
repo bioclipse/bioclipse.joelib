@@ -133,12 +133,14 @@ public class JOELibDescriptorCalculator implements IDescriptorCalculator {
                 IDescriptorResult res = new DescriptorResult();
                 res.setDescriptor( descType );
                 res = calculateDescriptor(joeMol, descriptor, res);
+                results.add(res);
             } else {
                 IDescriptorResult res = new DescriptorResult();
                 res.setDescriptor( descType );
                 res.setErrorMessage("Could not that JOELib descriptor.");
                 res.setValues(new Float[0]);
                 res.setLabels(new String[0]);
+                results.add(res);
             }
         }
         return results;
