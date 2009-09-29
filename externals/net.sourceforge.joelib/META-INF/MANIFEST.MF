@@ -5,10 +5,12 @@ Bundle-SymbolicName: net.sourceforge.joelib;singleton:=true
 Bundle-Version: 2.0.0.20090613
 Require-Bundle: org.eclipse.core.runtime,
  javax.vecmath;bundle-version="1.2.1"
-Bundle-ClassPath: jars/joelib.jar,
+Bundle-ClassPath: .,
+ jars/joelib.jar,
  jars/itext-0.94.jar,
  jars/xerces.jar,
- .
+ jars/ant.jar,
+ jars/jdom.jar
 Bundle-Activator: net.sourceforge.joelib.Activator
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: The Bioclipse Team
