@@ -56,7 +56,7 @@ public abstract class AbstractDouble implements Feature
      */
     private static Category logger = Category.getInstance(AbstractDouble.class
             .getName());
-    public static BasicFeatureInfo descInfo;
+    public BasicFeatureInfo descInfo;
 
     //~ Methods ////////////////////////////////////////////////////////////////
 
