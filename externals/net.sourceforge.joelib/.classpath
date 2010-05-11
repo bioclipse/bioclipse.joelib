@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="joelib2/gui/util/JLog4JPanel.java|joelib2/gui/example/SimpleGUIExample.java" kind="src" path="src"/>
 	<classpathentry exported="true" kind="lib" path="jars/itext-0.94.jar"/>
 	<classpathentry exported="true" kind="lib" path="jars/ant.jar"/>
 	<classpathentry exported="true" kind="lib" path="jars/jdom.jar"/>
