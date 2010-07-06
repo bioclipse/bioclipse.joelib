@@ -365,9 +365,9 @@ Public License instead of this License.
    </url>
 
    <requires>
-      <import feature="net.bioclipse.qsar_feature" version="2.4.0.RC1" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.platform_feature" version="2.4.0.RC1"/>
-      <import feature="net.bioclipse.rdf_feature" version="2.4.0.RC1"/>
+      <import feature="net.bioclipse.qsar_feature" version="2.4.0" match="greaterOrEqual"/>
+      <import feature="net.bioclipse.platform_feature" version="2.4.0" match="greaterOrEqual"/>
+      <import feature="net.bioclipse.rdf_feature" version="2.4.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
