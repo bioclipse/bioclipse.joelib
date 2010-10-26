@@ -16,4 +16,5 @@ Require-Bundle: net.bioclipse.joelib,
  net.bioclipse.core,
  net.bioclipse.qsar,
  org.eclipse.core.runtime,
- org.eclipse.ui
+ org.eclipse.ui,
+ net.bioclipse.core.api;bundle-version="1.0.0"

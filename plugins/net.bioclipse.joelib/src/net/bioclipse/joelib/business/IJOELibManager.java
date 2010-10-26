@@ -10,8 +10,8 @@
  ******************************************************************************/
 package net.bioclipse.joelib.business;
 
-import net.bioclipse.core.PublishedClass;
-import net.bioclipse.managers.business.IBioclipseManager;
+import net.bioclipse.core.api.managers.IBioclipseManager;
+import net.bioclipse.core.api.managers.PublishedClass;
 
 @PublishedClass ("Manager for the JOELib library.")
 public interface IJOELibManager extends IBioclipseManager {

@@ -9,7 +9,8 @@ Require-Bundle: org.eclipse.ui,
  net.bioclipse.core,
  net.bioclipse.scripting,
  org.eclipse.core.resources,
- net.sourceforge.joelib
+ net.sourceforge.joelib,
+ net.bioclipse.core.api;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: net.bioclipse.joelib,
  net.bioclipse.joelib.business
