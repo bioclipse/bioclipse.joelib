@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: JOELib2 Library
 Bundle-SymbolicName: net.sourceforge.joelib;singleton:=true
-Bundle-Version: 2.0.0.20090613
+Bundle-Version: 2.5.0.qualifier
 Require-Bundle: org.eclipse.core.runtime,
  javax.vecmath;bundle-version="1.2.1"
 Bundle-ClassPath: .,
