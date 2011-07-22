@@ -365,9 +365,6 @@ Public License instead of this License.
    </url>
 
    <requires>
-      <import feature="net.bioclipse.qsar_feature" version="2.5.0" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.platform_feature" version="2.5.0" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.rdf_feature" version="2.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="net.bioclipse.core"/>
