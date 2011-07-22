@@ -365,9 +365,13 @@ Public License instead of this License.
    </url>
 
    <requires>
-      <import feature="net.bioclipse.qsar_feature" version="2.4.0" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.platform_feature" version="2.4.0" match="greaterOrEqual"/>
-      <import feature="net.bioclipse.rdf_feature" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.bioclipse.core"/>
+      <import plugin="net.bioclipse.scripting"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="javax.vecmath" version="1.2.1" match="greaterOrEqual"/>
+      <import plugin="net.bioclipse.qsar"/>
    </requires>
 
    <plugin
