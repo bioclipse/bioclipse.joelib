@@ -360,10 +360,6 @@ library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
    </license>
 
-   <url>
-      <discovery label="JOELib Homepage" url="http://joelib.sf.net/"/>
-   </url>
-
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
