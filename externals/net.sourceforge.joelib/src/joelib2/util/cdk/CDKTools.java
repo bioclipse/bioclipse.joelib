@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //  Filename: $RCSfile: CDKTools.java,v $
-//  Purpose:  Connection to the tools of the Chemical Development Kit (CDK).
+//  Purpose:  Connection to the tools of the Chemistry Development Kit (CDK).
 //  Language: Java
 //  Compiler: JDK 1.4
 //  Authors:  Joerg Kurt Wegner
@@ -31,7 +31,7 @@ import joelib2.molecule.Molecule;
 
 /**
  * Helper class to faciliate access to tools of the
- * <a href="http://sourceforge.net/projects/cdk" target="_top">Chemical
+ * <a href="http://sourceforge.net/projects/cdk" target="_top">Chemistry
  * Development Kit (CDK)</a>.
  *
  * @.author     wegnerj
